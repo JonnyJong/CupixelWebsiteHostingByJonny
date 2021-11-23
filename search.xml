@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>网站管理流程与规范</title>
+      <link href="/howToDo/"/>
+      <url>/howToDo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="进入管理后台"><a href="#进入管理后台" class="headerlink" title="进入管理后台"></a>进入管理后台</h1><p>请与相关管理员和负责人获得后台登入方式。</p><h1 id="文章：增、删、改"><a href="#文章：增、删、改" class="headerlink" title="文章：增、删、改"></a>文章：增、删、改</h1><h2 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h2><h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p>进入后台，点击左上角菜单（下文均称作“侧栏”），点击“文章”进入文章列表，然后点击“新建文章”即可创建新文章。</p><p>文章名称规范：</p><ol><li>使用英文或拼音（使用汉字因转义会导致链接过长）</li><li>文章名不要有空格，使用下划线“_”代替空格</li><li>其他规范待补全</li></ol><h3 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h3><p>进入后台，在左侧栏点击“文章”进入文章列表，然后点击“新建文章”即可创建新文章。</p><p>文章名称规范：</p><ol><li>使用英文或拼音（使用汉字因转义会导致链接过长）</li><li>文章名不要有空格，使用下划线“_”代替空格</li><li>其他规范待补全</li></ol><h2 id="更改文章"><a href="#更改文章" class="headerlink" title="更改文章"></a>更改文章</h2><p>在文章开头填写文章属性，根据提示填写。<br>文章属性使用 <code>yaml</code> 语法，如“cover: ”之后有一格空格。</p><table><thead><tr><th>正确</th><th>错误</th></tr></thead><tbody><tr><td>cover: true</td><td>cover:true</td></tr></tbody></table><p>文章正文使用 markdown 和 html 语法。<br>参考 <a href="https://cupixel.pages.dev/hello-world/">部署测试 | Cupixel 影视创作社</a></p><p>后台的编辑器提供了快速设置格式的功能，在编辑器上方有一行按钮。<br>在手机端中，此功能还有些问题，建议参考 <a href="https://cupixel.pages.dev/hello-world/">部署测试 | Cupixel 影视创作社</a>中的语法。<br>在电脑端中，以此类推分别是：表情、标题、粗体、斜体、删除线、链接、无序列表、有序列表、任务列表、引用、分割线、代码块、行内代码、上传图片、表格、导出、全屏切换、预览。<br>其中常用的及语法请参考 <a href="https://cupixel.pages.dev/hello-world/">部署测试 | Cupixel 影视创作社</a>。</p><h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>在“文章列表”中，每个文章右侧有两个“操作”按钮，分别是“编辑”和“删除”，前者点击后可修改文章，后者点击后可删除文章。</p><p><strong>删除文章前务必确认！</strong></p><h1 id="更新公告"><a href="#更新公告" class="headerlink" title="更新公告"></a>更新公告</h1><p>在侧栏中，点击“配置”，会出现多个配置文件，点击最后一个配置文件右侧的编辑按钮，找到约第 70 行。</p><pre class=" language-yml"><code class="language-yml">dream:  enable: true  showTitle: true  title: 公告  text: 此处编辑公告内容，如需换行需要进行缩进，不熟悉yml语法则不建议换行。</code></pre><p>同样需注意语法：</p><table><thead><tr><th>正确</th><th>错误</th></tr></thead><tbody><tr><td>text: 此处编辑公告内容，如需换行需要进行缩进，不熟悉yml语法则不建议换行。</td><td>text:此处编辑公告内容，如需换行需要进行缩进，不熟悉yml语法则不建议换行。</td></tr></tbody></table><h1 id="主页视频"><a href="#主页视频" class="headerlink" title="主页视频"></a>主页视频</h1><p>在侧栏中，点击“配置”，会出现多个配置文件，点击最后一个配置文件右侧的编辑按钮，找到约第 95 行。</p><table><thead><tr><th>属性</th><th>值</th><th>作用</th></tr></thead><tbody><tr><td>enable</td><td>true/false</td><td>启用或禁用</td></tr><tr><td>showTitle</td><td>true/false</td><td>显示标题</td></tr><tr><td>title</td><td>文本</td><td>标题</td></tr><tr><td>iframeUrl</td><td>player.bilibili.com/player.html?aid=271&amp;bvid=BV号&amp;cid=3659795&amp;page=1</td><td>链接</td></tr></tbody></table><pre class=" language-yml"><code class="language-yml">video:  enable: true  showTitle: true  title: 精彩视频  url: # url和iframeUrl其中一个必填  iframeUrl: //player.bilibili.com/player.html?aid=271&bvid=BV1xx411c7Xg&cid=3659795&page=1 #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1  pic:  thumbnails:  height: # 如：400  autoplay: false # 是否自动播放  theme: '#303030'  loop: false # 是否循环播放  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'  volume: 0.7</code></pre><h1 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h1><p>此操作需要登入 Github 仓库进行修改，也可以将图片上传到图床，引用外部图片链接。</p><p>如引用外部链接，按以下配置：<br>在侧栏中，点击“配置”，会出现多个配置文件，点击最后一个配置文件右侧的编辑按钮，找到约第 243 行。<br>按照格式填写，例：</p><pre class=" language-yml"><code class="language-yml">myGallery:  enable: true  data:    - /medias/featureimages/0.jpg    - /medias/featureimages/1.jpg    - /medias/featureimages/2.jpg    - https://jonnys.top/img/cover/009.webp</code></pre><h1 id="主页背景图"><a href="#主页背景图" class="headerlink" title="主页背景图"></a>主页背景图</h1><p>此操作需要登入 Github 仓库进行修改，可联系 Jonny 帮助更改。</p><h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><p>此操作需要登入 Github 仓库进行修改，可联系 Jonny 帮助更改。</p><h1 id="社交、媒体链接"><a href="#社交、媒体链接" class="headerlink" title="社交、媒体链接"></a>社交、媒体链接</h1><p>此操作需要登入 Github 仓库进行修改，可联系 Jonny 帮助更改。</p><h1 id="发布更新"><a href="#发布更新" class="headerlink" title="发布更新"></a>发布更新</h1><p>修改完成后，点击右上角“发布”或“保存”即可发布更新。</p><h1 id="获取更多帮助"><a href="#获取更多帮助" class="headerlink" title="获取更多帮助"></a>获取更多帮助</h1><p>更多内容可前往</p><p><a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao">http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao</a></p><p>查看主题配置文档</p><p>或使用邮箱联系（联系前请先尝试在网络上查找资料自行解决，尝试无果再联系）</p><p><a href="mailto:jonnyjong@outlook.com">jonnyjong@outlook.com</a></p><p>获取帮助，邮箱联系时请在邮件主题开头编写“Cupixel博客：”<br>简要说明来意，不定期回复。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>请在此处填写标题，注意，title: 后面需要跟一个空格，标题最好用英文双引号括起来</title>
+      <link href="/%E5%9C%A8%E7%BA%BF%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/"/>
+      <url>/%E5%9C%A8%E7%BA%BF%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>date: 处填写日期，跟着上面的格式来填写<br>tag: 处填写标签，根据上面的格式<br>img: 是文章的封面，可以不填写<br>top: 当填写 true 时，此文章会变成首页推荐文章<br>cover: 当填写 true 时，此文章会加入到首页封面轮播中<br>coverImg: 如果加入到了首页轮播，还可以单独设置图片，不设置则使用 img 处填写的图片<br>summary: 文章的摘要、或者说是描述<br>categories: 文章的归类</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>部署测试</title>
+      <link href="/hello-world/"/>
+      <url>/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>这是一篇博客及主题测试文章，也可以在这里参考相关语法的使用方式。</p><h1 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h1><p>普通的文本，<strong>加粗的文本，</strong> <em>斜体的文本，</em>  <del>带有删除线的文本。</del></p><h1 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h1><p><a href="https://cupixel.pages.dev/">Cupixel Official</a></p><h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p><img src="/favicon.png" alt="网站图标"></p><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul><li>你好，世界。</li><li>Hello World</li></ul><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol><li>首先</li><li>其次</li><li>然后</li><li>最后</li></ol><h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><ul><li><input checked="" disabled="" type="checkbox"> 完成了</li><li><input disabled="" type="checkbox"> 没完成</li></ul><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><hr><p>有两种分割线语法，上面的是 markdown 语法，下面的是 html 语法。</p><hr><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><thead><tr><th>这是表格的标题</th><th>第二列</th><th>第三列</th></tr></thead><tbody><tr><td>第一行</td><td></td><td>表格的大小可根据需要任意修改</td></tr><tr><td></td><td>第三行第二列</td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
